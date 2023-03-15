@@ -38,10 +38,14 @@ fetch("https://striveschool-api.herokuapp.com/books")
 			let addToCart = col.querySelector("#add-to-cart");
 			let cartList = document.querySelector("#cart-list");
 			addToCart.addEventListener("click", () => {
+				let containerCartItem = document.createElement("div");
+				containerCartItem.classList.add("d-flex");
+				containerCartItem.classList.add("p-2");
 				let item = document.createElement("li");
 				item.className = "dropdown-item";
 				item.innerText = `${book.title}`;
-				cartList.appendChild(item);
+				containerCartItem.appendChild(item);
+				cartList.appendChild(containerCartItem);
 				//salvo nel local storage
 				let CART = "Cart";
 				let cart = [];
@@ -57,9 +61,10 @@ fetch("https://striveschool-api.herokuapp.com/books")
 				deleteFromCart.classList.add("btn");
 				deleteFromCart.classList.add("btn-outline-danger");
 				deleteFromCart.textContent = "Elimina";
-				item.appendChild(deleteFromCart);
+				containerCartItem.appendChild(deleteFromCart);
 				deleteFromCart.addEventListener("click", () => {
 					item.remove();
+					deleteFromCart.remove();
 				});
 			});
 			row.appendChild(col);
