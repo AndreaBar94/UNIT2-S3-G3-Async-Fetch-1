@@ -5,7 +5,10 @@ fetch("https://striveschool-api.herokuapp.com/books")
 		box.innerHTML = "";
 		const row = document.createElement("div");
 		row.className = "row";
-		row.classList.add("row-cols-4");
+		row.classList.add("row-cols-1");
+		row.classList.add("row-cols-md-2");
+		row.classList.add("row-cols-lg-4");
+		row.classList.add("row-cols-xl-6");
 		row.classList.add("d-flex");
 		row.classList.add("align-items-end");
 		row.classList.add();
