@@ -22,8 +22,8 @@ fetch("https://striveschool-api.herokuapp.com/books")
             <div class="card-body">
             <h5 class="card-title">${book.title}</h5>
             <p class="card-text">${book.category}; Price: ${book.price}</p>
-            <button type="button" id="add-to-cart" class="btn btn-primary">Compra ora</button>
-            <button type="button" id="discard-btn" class="btn btn-primary">Scarta</button>
+            <button type="button" id="add-to-cart" class="btn btn-primary m-1">Compra ora</button>
+            <button type="button" id="discard-btn" class="btn btn-primary m-1">Scarta</button>
             </div>
         </div>
                         `;
