@@ -71,5 +71,3 @@ fetch("https://striveschool-api.herokuapp.com/books")
 		});
 	})
 	.catch((error) => console.log("CATCH", error));
-
-//DISCARD BUTTON
