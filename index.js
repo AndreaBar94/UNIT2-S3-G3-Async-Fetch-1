@@ -18,7 +18,7 @@ fetch("https://striveschool-api.herokuapp.com/books")
 			col.className = "col";
 			col.innerHTML = `
             <div class="card shadow" id="${book.asin}">
-            <img src="${book.img}" class="card-img-top" alt="book thumbnail">
+            <img src="${book.img}" class="card-img-top img-fluid" alt="book thumbnail">
             <div class="card-body">
             <h5 class="card-title">${book.title}</h5>
             <p class="card-text">${book.category}; Price: ${book.price}</p>
